@@ -3,3 +3,7 @@
 
 # vscode files
 .vscode
+
+# Protege generated files
+*.obda
+*.properties
