@@ -1,4 +1,4 @@
-﻿X,Y,OBJECTID,PLAYGROUND,Location,SURFACE,PARKING,OPENHRS,TOILETFACI,SPECIANNEE,EQUIPMENT,Lat,Long,EastITM,NorthITM,EastIG,NorthIG
+﻿X,Y,ID,PLAYGROUND,LOCATION,SURFACE,PARKING,OPENHRS,TOILETFACI,SPECIANNEE,EQUIPMENT,LAT,LONG,EAST_ITM,NORTH_ITM,EAST_IG,NORTH_IG
 -8.998329572914693,53.28607799209113,1,Gleann Bhan Playground,"Ballybane, Galway",Rubber Wet-pour surface,Within estate,No restricted opening hours,No,No, ,53.286,-8.999,533391.393,726687.764,133426.244,226658.92
 -9.017311033673352,53.282668600004847,2,Mervue Public Park Playground,"Mervue, Galway",Rubber Wet-pour surface,Within estate,No restricted opening hours,No,No, ,53.283,-9.018,532120.521,726326.313,132155.1,226297.384
 -9.027776427763447,53.276625869353005,3,Lakeshore Drive Playground,"Renmore, Galway",Rubber Wet-pour surface,Within estate,No restricted opening hours,No,No, ,53.277,-9.028,531413.082,725664.03,131447.51,225634.955

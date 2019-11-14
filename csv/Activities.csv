@@ -1,4 +1,4 @@
-ActivityID,Name,Url,Telephone,Longitude,Latitude,AddressRegion,AddressLocality,AddressCountry
+ID,NAME,URL,TELEPHONE,LONGITUDE,LATITUDE,ADDRESS_REGION,ADDRESS_LOCALITY,ADDRESS_COUNTRY
 1,Roadbikehire.ie,http://roadbikehire.ie,+353(0)868545654,-6.1265601,53.2541173,Dublin,Killiney,Republic of Ireland
 2,John Keoghs The Lock Keeper,http://johnkeoghs.ie/,+353(0)91449431,-9.05859582023777,53.2701432153847,Galway,Galway,Republic of Ireland
 3,Nook Café,https://facebook.com/NookCafeRestaurant,+353(0)873522135,-8.49199333807439,54.1818240760964,Sligo,Collooney,Republic of Ireland
