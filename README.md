@@ -19,7 +19,22 @@ the data can be found at [data.gov.ie](https://data.gov.ie)
 
 ### Data Preprocessing
 
-- each row from CSV must have a `ID`(literally `ID`) when uplifting using Juma
+- each row from CSV is suggested to have a `ID` when uplifting using Juma
   - add a column `ID` in [Activities.csv](./csv/Activities.csv)
   - changing `OBJECTID` into `ID` of other CSVs
 - the head of tables are suggested to be in all capital letters eg. `NAME`
+  - because all the operations on columns/heads accept only capital letters
+
+## Ontology Design
+
+- try to reuse the existing ontologies(schemas):
+
+### Problems
+
+#### about merging the `LOCATION`
+
+- the location for `PARK` and `PLAYGROUND` but not for `PITCH`
+  - the meaning of the location is not the same
+- SPARQL queries can be performed across the CSVs on different columns
+
+so we are going to use a sub properties features.
