@@ -61,7 +61,7 @@
 											"top": 15,
 											"width": 119,
 											"height": 13,
-											"text": "Coordinate"
+											"text": "GeoCoordinate"
 										},
 										{
 											"_type": "LabelView",
@@ -131,7 +131,7 @@
 											"top": 38,
 											"width": 119,
 											"height": 13,
-											"text": "+lon",
+											"text": "+longitude",
 											"horizontalAlignment": 0
 										},
 										{
@@ -148,7 +148,7 @@
 											"top": 53,
 											"width": 119,
 											"height": 13,
-											"text": "+lat",
+											"text": "+latitude",
 											"horizontalAlignment": 0
 										}
 									],
@@ -392,7 +392,7 @@
 											"top": 427,
 											"width": 183,
 											"height": 13,
-											"text": "+specianne",
+											"text": "+speciannee",
 											"horizontalAlignment": 0
 										},
 										{
@@ -7520,7 +7520,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Coordinate",
+					"name": "GeoCoordinate",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -7588,8 +7588,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFuZWIzDO1zscs="
 							},
-							"name": "lon",
-							"type": ""
+							"name": "longitude"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7597,8 +7596,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFuZWIzDO1zscs="
 							},
-							"name": "lat",
-							"type": ""
+							"name": "latitude"
 						}
 					]
 				},
@@ -7658,8 +7656,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFuZWKU9O2fzTs="
 							},
-							"name": "specianne",
-							"type": ""
+							"name": "speciannee"
 						},
 						{
 							"_type": "UMLAttribute",
