@@ -25,9 +25,39 @@ the data can be found at [data.gov.ie](https://data.gov.ie)
 - the head of tables are suggested to be in all capital letters eg. `NAME`
   - because all the operations on columns/heads accept only capital letters
 
+for Bar Or Pub, first `grep` :
+
+- `-w` for a single word
+- `-i` ignore the cases
+- `\|` convert pipe to OR
+
+```sh
+cat Activities.csv | grep -i -w "bar\|pub" > Bars_Activities.csv
+```
+
+for Restaurant, rid of bars:
+
+```sh
+cat Activities.csv | grep -i -w "restaurant" | grep -i -w -v "bar\|pub" > Restaurant_Activities.csv
+```
+
+for Golf Club, rid of bars and restaurants:
+
+```sh
+cat Activities.csv | grep -i -w "golf" | grep -i -w -v "restaurant" | grep -i -w -v "bar\|pub" > Golf_Activities.csv
+```
+
+for the rest, make them as events
+
+```sh
+cat Activities.csv | grep -i -w -v "golf" | grep -i -w -v "restaurant" | grep -i -w -v "bar\|pub" > Other_Activities.csv
+```
+
 ## Ontology Design
 
-- try to reuse the existing ontologies(schemas):
+- try to reuse the existing ontologies(schemas) from [schema.org](https://schema.org/docs/developers.html)
+  1. the `schema.ttl` is from here : http://schema.org/version/latest/schema.ttl
+  2. copy-paste the used ontology from the `schema.ttl`
 
 ### Problems
 
