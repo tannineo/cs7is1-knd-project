@@ -179,12 +179,15 @@ schema:SportsActivityLocation rdf:type owl:Class ;
 
 schema:GolfCourse rdf:type owl:Class ;
   rdfs:subClassOf schema:SportsActivityLocation ;
+  owl:disjointWith schema:Restaurant , schema:BarOrPub ;
   rdfs:subClassOf :Activity .
 
 schema:Park rdf:type owl:Class ;
+  owl:disjointWith schema:Playground , :Pitch ;
   rdfs:subClassOf schema:CivicStructure .
 
 schema:Playground rdf:type owl:Class ;
+  owl:disjointWith schema:Park , :Pitch ;
   rdfs:subClassOf schema:CivicStructure .
 
 # own
@@ -193,6 +196,7 @@ schema:Playground rdf:type owl:Class ;
   rdfs:subClassOf schema:Place .
 
 :Pitch rdf:type owl:Class ;
+  owl:disjointWith schema:Park , schema:Playground ;
   rdfs:subClassOf schema:CivicStructure .
 
 :County rdf:type owl:Class ;
