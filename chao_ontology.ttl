@@ -13,20 +13,6 @@
 
 # Object Properties ##########################
 
-:test rdf:type owl:ObjectProperty ;
-      rdfs:subPropertyOf owl:topObjectProperty ;
-      rdf:type owl:FunctionalProperty ,
-               owl:InverseFunctionalProperty ,
-               owl:SymmetricProperty ,
-               owl:AsymmetricProperty ,
-               owl:TransitiveProperty ,
-               owl:ReflexiveProperty ,
-               owl:IrreflexiveProperty ;
-      rdfs:domain :Activity ,
-                  :County ;
-      rdfs:range :County ,
-                 :Region .
-
 schema:geo rdf:type owl:ObjectProperty ;
   rdfs:subPropertyOf owl:topObjectProperty ;
   rdfs:domain schema:Place ;
