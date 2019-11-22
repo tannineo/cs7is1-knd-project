@@ -5,11 +5,20 @@
     @prefix co: <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#> .
     @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+########## uplifting from Galway_City_Playground_Locations.csv ##########
+#
+#  The reason for having this separate R2RML file is that Juma seems to have
+#  limitations on the number of CSVs uplifted. Since there are no links to other CSVs.
+#  We did the mapping separately.
+#
+#########################################################################
+
   <#TriplesMapcoPlayground>
   rr:logicalTable [
     rr:tableName "Galway_City_Playground_Locations";
   ];
 
+   # so:Playground uplifting
    rr:subjectMap [
       rr:template "http://www.example.org/playground/{ID}";
       rr:class so:Playground;
@@ -103,6 +112,8 @@
       rr:datatype xsd:string;
      ];
   ];
+
+  # linking so:ParkFacility
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:geo;
@@ -120,6 +131,8 @@
      ];
     ];
   ];
+
+  # linking so:GeoCoordinates
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:containsPlace;
@@ -135,6 +148,7 @@
   ];
   .
 
+  # uplift so:GeoCoordinates
   <#TriplesMapcoor>
   rr:logicalTable [
     rr:tableName "Galway_City_Playground_Locations";
@@ -169,6 +183,7 @@
   ];
   .
 
+# uplift so:ParkingFacility
   <#TriplesMapparking>
   rr:logicalTable [
     rr:tableName "Galway_City_Playground_Locations";

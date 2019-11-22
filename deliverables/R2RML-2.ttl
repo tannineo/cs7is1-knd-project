@@ -5,11 +5,18 @@
     @prefix so: <http://schema.org/> .
     @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+
+########## uplifting from Bars_Activities.csv ###########################
+#
+#  This CSV is first filtered from the Activities.csv
+#
+#########################################################################
   <#TriplesMapcoBarActivity>
   rr:logicalTable [
     rr:tableName "Bars_Activities";
   ];
 
+   # so:BarOrPub uplifting
    rr:subjectMap [
       rr:template "http://www.example.org/activity/bar/{ID}";
       rr:class so:BarOrPub;
@@ -59,11 +66,12 @@
       rr:datatype xsd:string;
      ];
   ];
+
+  # linking co:Region
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant co:locationR;
     ];
-
      rr:objectMap [
       rr:parentTriplesMap <#TriplesMapcoRegionBar>;
       rr:joinCondition [
@@ -72,6 +80,8 @@
      ];
     ];
   ];
+
+  # linking so:GeoCoordinates
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:geo;
@@ -91,6 +101,7 @@
   ];
   .
 
+  # uplifting so:GeoCoordinates
   <#TriplesMapcoCoordinateBar>
   rr:logicalTable [
     rr:tableName "Bars_Activities";
@@ -125,6 +136,7 @@
   ];
   .
 
+  # uplift co:Region
   <#TriplesMapcoRegionBar>
   rr:logicalTable [
     rr:tableName "Bars_Activities";
@@ -146,6 +158,8 @@
       rr:datatype xsd:string;
      ];
   ];
+
+  # linking so:BarOrPub
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:containsPlace;
@@ -161,6 +175,7 @@
   ];
   .
 
+  # uplift co:County
   <#TriplesMapcoCountyBar>
   rr:logicalTable [
     rr:tableName "Bars_Activities";
@@ -182,6 +197,8 @@
       rr:datatype xsd:string;
      ];
   ];
+
+  # uplift co:Region
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:containsPlace;
@@ -197,6 +214,7 @@
   ];
   .
 
+  # uplift so:Country
   <#TriplesMapcoCountryBar>
   rr:logicalTable [
     rr:tableName "Bars_Activities";
@@ -218,6 +236,8 @@
       rr:datatype xsd:string;
      ];
   ];
+
+  # linking co:County
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:containsPlace;
@@ -233,10 +253,18 @@
   ];
   .
 
+
+########## uplifting from Restaurant_Activities.csv #####################
+#
+#  This CSV is first filtered from the Activities.csv
+#
+#########################################################################
+
     @prefix co: <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#> .
     @prefix so: <http://schema.org/> .
     @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+  # uplifting so:Restaurant
   <#TriplesMapcoRestaurantActivity>
   rr:logicalTable [
     rr:tableName "Restaurant_Activities";
@@ -291,6 +319,8 @@
       rr:datatype xsd:string;
      ];
   ];
+
+  # linking co:Region
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant co:locationR;
@@ -304,6 +334,8 @@
      ];
     ];
   ];
+
+  # linking so:GeoCoordinates
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:geo;
@@ -323,6 +355,7 @@
   ];
   .
 
+  # uplifting so:GeoCoordinates
   <#TriplesMapcoCoordinateRest>
   rr:logicalTable [
     rr:tableName "Restaurant_Activities";
@@ -357,6 +390,7 @@
   ];
   .
 
+  # uplifting co:Region
   <#TriplesMapcoRegionRest>
   rr:logicalTable [
     rr:tableName "Restaurant_Activities";
@@ -378,6 +412,8 @@
       rr:datatype xsd:string;
      ];
   ];
+
+  # linking so:Restaurant
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:containsPlace;
@@ -393,6 +429,7 @@
   ];
   .
 
+  # uplift co:County
   <#TriplesMapcoCountyRest>
   rr:logicalTable [
     rr:tableName "Restaurant_Activities";
@@ -414,6 +451,8 @@
       rr:datatype xsd:string;
      ];
   ];
+
+  # linking co:Region
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:containsPlace;
@@ -429,6 +468,7 @@
   ];
   .
 
+  # uplifting co:Country
   <#TriplesMapcoCountryRest>
   rr:logicalTable [
     rr:tableName "Restaurant_Activities";
@@ -450,11 +490,12 @@
       rr:datatype xsd:string;
      ];
   ];
+
+  # linking co:County
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:containsPlace;
     ];
-
      rr:objectMap [
       rr:parentTriplesMap <#TriplesMapcoCountyRest>;
       rr:joinCondition [
@@ -465,10 +506,18 @@
   ];
   .
 
+
+########## uplifting from Golf_Activities.csv ###########################
+#
+#  This CSV is first filtered from the Activities.csv
+#
+#########################################################################
+
     @prefix co: <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#> .
     @prefix so: <http://schema.org/> .
     @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+  # uplifting so:GolfCourse
   <#TriplesMapcoGolf>
   rr:logicalTable [
     rr:tableName "Golf_Activities";
@@ -523,6 +572,8 @@
       rr:datatype xsd:string;
      ];
   ];
+
+  # linking co:Region
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant co:locationR;
@@ -536,6 +587,8 @@
      ];
     ];
   ];
+
+  # linking so:GeoCoordinates
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:geo;
@@ -555,6 +608,7 @@
   ];
   .
 
+  # uplifting so:GeoCoordinates
   <#TriplesMapcoCoordinateGolf>
   rr:logicalTable [
     rr:tableName "Golf_Activities";
@@ -589,6 +643,7 @@
   ];
   .
 
+  # uplifting co:Region
   <#TriplesMapcoRegionGolf>
   rr:logicalTable [
     rr:tableName "Golf_Activities";
@@ -610,6 +665,8 @@
       rr:datatype xsd:string;
      ];
   ];
+
+  # linking so:GolfCourse
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:containsPlace;
@@ -625,6 +682,7 @@
   ];
   .
 
+  # uplifting co:County
   <#TriplesMapcoCountyGolf>
   rr:logicalTable [
     rr:tableName "Golf_Activities";
@@ -646,6 +704,8 @@
       rr:datatype xsd:string;
      ];
   ];
+
+  # linking co:Region
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:containsPlace;
@@ -661,6 +721,7 @@
   ];
   .
 
+  # uplifting so:Country
   <#TriplesMapcoCountryGolf>
   rr:logicalTable [
     rr:tableName "Golf_Activities";
@@ -682,6 +743,8 @@
       rr:datatype xsd:string;
      ];
   ];
+
+  # linking co:County
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:containsPlace;
@@ -697,10 +760,17 @@
   ];
   .
 
+########## uplifting from Other_Activities.csv ###########################
+#
+#  This CSV is first filtered from the Activities.csv
+#
+##########################################################################
+
     @prefix co: <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#> .
     @prefix so: <http://schema.org/> .
     @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+  # uplift co:Activity
   <#TriplesMapcoOther>
   rr:logicalTable [
     rr:tableName "Other_Activities";
@@ -755,6 +825,8 @@
       rr:datatype xsd:string;
      ];
   ];
+
+  # linking co:Region
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant co:locationR;
@@ -768,6 +840,8 @@
      ];
     ];
   ];
+
+  # linking so:GeoCoordinates
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:geo;
@@ -787,6 +861,7 @@
   ];
   .
 
+  # uplifting so:GeoCoordinates
   <#TriplesMapcoCoordinateOther>
   rr:logicalTable [
     rr:tableName "Other_Activities";
@@ -821,6 +896,7 @@
   ];
   .
 
+  # uplifting co:Region
   <#TriplesMapcoRegionOther>
   rr:logicalTable [
     rr:tableName "Other_Activities";
@@ -842,6 +918,8 @@
       rr:datatype xsd:string;
      ];
   ];
+
+  # linking co:Activity
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:containsPlace;
@@ -857,6 +935,7 @@
   ];
   .
 
+  # uplift co:County
   <#TriplesMapcoCountyOther>
   rr:logicalTable [
     rr:tableName "Other_Activities";
@@ -878,6 +957,8 @@
       rr:datatype xsd:string;
      ];
   ];
+
+  # linking co:Region
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:containsPlace;
@@ -893,6 +974,7 @@
   ];
   .
 
+  # uplifting so:Country
   <#TriplesMapcoCountryOther>
   rr:logicalTable [
     rr:tableName "Other_Activities";
@@ -913,7 +995,9 @@
       rr:termType rr:Literal;
       rr:datatype xsd:string;
      ];
-  ];
+  ]
+
+  # linking co:County
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:containsPlace;
@@ -929,10 +1013,19 @@
   ];
   .
 
+
+########## uplifting from Parks_In_Galway_City.csv #######################
+#
+#  Parks_In_Galway_City.csv contains infomation about parks.
+#
+##########################################################################
+
+
     @prefix co: <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#> .
     @prefix so: <http://schema.org/> .
     @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+  # uplifting so:Park
   <#TriplesMapcoPark>
   rr:logicalTable [
     rr:tableName "Parks_in_Galway_City";
@@ -1020,6 +1113,8 @@
       rr:datatype xsd:string;
      ];
   ];
+
+  # linking so:GeoCoordinates
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:geo;
@@ -1039,6 +1134,7 @@
   ];
   .
 
+  # uplifting so:GeoCoordinates
   <#TriplesMapcoCoordinatePark>
   rr:logicalTable [
     rr:tableName "Parks_in_Galway_City";
@@ -1073,10 +1169,19 @@
   ];
   .
 
+
+########## uplifting from Galway_City_Public_Sports_Facilities.csv #######
+#
+#  Galway_City_Public_Sports_Facilities.csv contains infomation about parks.
+#
+##########################################################################
+
+
     @prefix co: <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#> .
     @prefix so: <http://schema.org/> .
     @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+  # uplifting co:Pitch
   <#TriplesMapcoPitch>
   rr:logicalTable [
     rr:tableName "Galway_City_Public_Sports_Facilities";
@@ -1131,6 +1236,8 @@
       rr:datatype xsd:string;
      ];
   ];
+
+  # linking so:GeoCoordinates
   rr:predicateObjectMap [
     rr:predicateMap [
       rr:constant so:geo;
@@ -1150,6 +1257,7 @@
   ];
   .
 
+  # tried linking using symmetric properties
   <#TriplesMapcoPitch2>
   rr:logicalTable [
     rr:tableName "Galway_City_Public_Sports_Facilities";
@@ -1175,6 +1283,7 @@
   ];
   .
 
+  # uplifting so:GeoCoordinates
   <#TriplesMapcoCoordinatePitch>
   rr:logicalTable [
     rr:tableName "Galway_City_Public_Sports_Facilities";
