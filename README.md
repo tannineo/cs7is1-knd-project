@@ -53,19 +53,25 @@ for the rest, make them as events
 cat Activities.csv | grep -i -w -v "golf" | grep -i -w -v "restaurant" | grep -i -w -v "bar\|pub" > Other_Activities.csv
 ```
 
-
 ## Ontology Design
 
 - try to reuse the existing ontologies(schemas) from [schema.org](https://schema.org/docs/developers.html)
   1. the `schema.ttl` is from here : http://schema.org/version/latest/schema.ttl
   2. copy-paste the used ontology from the `schema.ttl`
 
-
 ## Uplifting
 
 After uplifting, do some replacement to adopt the turtle `prefix`
 
 ### Problems
+
+hand written turtle files:
+
+- the online validator: http://ttl.summerofcode.be/
+
+data visualization problems:
+
+- WebVOWL: http://www.visualdataweb.de/webvowl/
 
 #### about merging the `LOCATION`
 
