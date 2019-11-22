@@ -29,8 +29,9 @@ schema:containsPlace rdf:type owl:ObjectProperty ;
 :locationR rdf:type owl:ObjectProperty ;
   rdfs:subPropertyOf owl:topObjectProperty ;
   owl:inverseOf schema:containsPlace ;
-  rdfs:domain :Activity ;
-  rdfs:range :Region .
+  rdf:type owl:TransitiveProperty ;
+  rdfs:domain schema:Place ;
+  rdfs:range schema:Place .
 
 :otherPitch rdf:type owl:ObjectProperty,
                      owl:SymmetricProperty ;
